@@ -1,0 +1,66 @@
+{
+    "nodes": [
+        {
+            "name": "input",
+            "id": "in_0",
+            "opcode": "input",
+            "runtime": 0.1,
+            "size": 0.25,
+            "energy": 0.1
+        },
+        {
+            "name": "branch1",
+            "id": "branch1_1",
+            "opcode": "operation",
+            "runtime": 0.2,
+            "size": 0.25,
+            "energy": 0.2
+        },
+        {
+            "name": "branch2",
+            "id": "branch2_2",
+            "opcode": "operation",
+            "runtime": 0.3,
+            "size": 0.25,
+            "energy": 0.3
+        },
+        {
+            "name": "output",
+            "id": "output_3",
+            "opcode": "operation",
+            "runtime": 0.1,
+            "size": 0.25,
+            "energy": 0.1
+        }
+    ],
+    "edges": [
+        {
+            "source": "in_0",
+            "destination": "branch1_1",
+            "size": 1,
+            "energy": 0.1,
+            "latency": 0.1
+        },
+        {
+            "source": "in_0",
+            "destination": "branch2_2",
+            "size": 10,
+            "energy": 0.1,
+            "latency": 0.1
+        },
+        {
+            "source": "branch1_1",
+            "destination": "output_3",
+            "size": 1,
+            "energy": 0.1,
+            "latency": 0.1
+        },
+        {
+            "source": "branch2_2",
+            "destination": "output_3",
+            "size": 1,
+            "energy": 0.1,
+            "latency": 0.1
+        }
+    ]
+}
